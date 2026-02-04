@@ -1,0 +1,30 @@
+/* 나눔스퀘어 */
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;700&display=swap");
+
+/* Basic Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "NanumSquare", "IBM Plex Sans KR", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.text-nanum-eb {
+  font-family: "NanumSquareExtraBold", "IBM Plex Sans KR", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Custom Utilities (Tailwind에서 안 잡히는 세밀한 조절용) */
+.drop-shadow-lg {
+  filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* details 태그 기본 화살표 제거 */
+details summary::-webkit-details-marker {
+  display: none;
+}

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="ico" href="favicon.ico"/>
+    <title>밍글 Mingle - 프리미엄 영어 돌봄</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Noto Sans KR", "sans-serif"] },
+            colors: {
+              mingle: {
+                purple: "#B487E2",
+                "purple-light": "#EFDDFF",
+                "purple-bg": "#F7EFFF",
+                blue: "#0098FF",
+                "blue-light": "#BFE6FF",
+                "blue-bg": "#E5F4FF",
+              },
+            },
+            fontSize: {
+              header: ["60px", { lineHeight: "1.2" }],
+              "header-lg": ["70px", { lineHeight: "1.2" }],
+              "header-xl": ["88px", { lineHeight: "1.2" }],
+              title: ["30px", { lineHeight: "1.4" }],
+              "title-lg": ["32px", { lineHeight: "1.4" }],
+              "title-xl": ["36px", { lineHeight: "1.4" }],
+              body: ["16px", { lineHeight: "1.6" }],
+              "body-lg": ["18px", { lineHeight: "1.8" }],
+              "body-xl": ["20px", { lineHeight: "1.8" }],
+            },
+            spacing: {
+              section: "60px",
+              "section-lg": "60px",
+              "section-xl": "80px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+
+  </head>
+  <body class="bg-white text-gray-800 antialiased">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-[0_2px_12px_rgba(0,0,0,0.06)]"
+    >
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14 sm:h-16 flex-wrap sm:flex-nowrap"
+      >
+        <a href="#" class="flex items-center gap-2 flex-shrink-0">
+          <img src="assets/logo.webp" alt="밍글 로고" class="h-7 sm:h-8 w-auto" />
+          <img
+            src="assets/logo_kr.webp"
+            alt="밍글 한글 로고"
+            class="h-[1.2rem] sm:h-[1.4rem] w-auto"
+          />
+        </a>
+        <!-- 데스크톱 메뉴 (640px 이상) -->
+        <ul class="hidden sm:flex items-center gap-6 text-sm text-gray-600">
+          <li><a href="#intro" class="hover:text-mingle-purple transition">밍글 소개</a></li>
+          <li><a href="#class" class="hover:text-mingle-purple transition">밍글 교육</a></li>
+          <li><a href="#comunity" class="hover:text-mingle-purple transition">밍글 커뮤니티</a></li>
+          <li><a href="#mycontent" class="hover:text-mingle-purple transition">마이 밍글</a></li>
+          <li><a href="#contact" class="hover:text-mingle-purple transition">지사/강사</a></li>
+        </ul>
+        <!-- 모바일 메뉴 토글 (640px 미만) -->
+        <details class="sm:hidden relative group">
+          <summary
+            class="list-none p-2 -mr-2 text-gray-600 cursor-pointer rounded hover:bg-gray-100"
+            aria-label="메뉴 열기"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </summary>
+          <div
+            class="absolute right-0 top-full mt-1 py-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100"
+          >
+            <a
+              href="#intro"
+              class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-mingle-purple"
+              >밍글 소개</a
+            >
+            <a
+              href="#class"
+              class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-mingle-purple"
+              >밍글 교육</a
+            >
+            <a
+              href="#comunity"
+              class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-mingle-purple"
+              >밍글 커뮤니티</a
+            >
+            <a
+              href="#mycontent"
+              class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-mingle-purple"
+              >마이 밍글</a
+            >
+            <a
+              href="#contact"
+              class="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-mingle-purple"
+              >지사/강사</a
+            >
+          </div>
+        </details>
+      </nav>
+    </header>
+
+    <!-- Hero Section (font-size-header: 60 / 70 / 88) -->
+    <section class="relative">
+      <div class="relative h-[280px] sm:h-[300px] md:h-[360px] lg:h-[400px] overflow-hidden">
+        <img
+          src="assets/hero.webp"
+          alt="밍글 수업 현장"
+          class="w-full h-full object-cover object-center"
+        />
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <h1
+            class="text-white text-nanum-eb drop-shadow-lg text-header lg:text-header-lg xl:text-header-xl"
+          >
+            밍글 소개
+          </h1>
+        </div>
+      </div>
+      <p
+        class="text-center max-w-3xl mx-auto px-4 py-section lg:py-section-lg xl:py-section-xl text-nanum-eb text-title lg:text-title-lg xl:text-title-xl text-gray-800 leading-relaxed"
+      >
+        아이를 커리큘럼에 맞추는 수업이 아니라,<br />
+        아이 반응에 맞춰 놀이로 즐기는 영어 돌봄 서비스
+      </p>
+    </section>
+
+    <!-- Service Introduction (Section 2) - section-gap 적용 -->
+    <section
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-section lg:py-section-lg xl:py-section-xl"
+    >
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        <div class="flex-shrink-0 w-full lg:w-2/5 order-1 lg:order-2">
+          <img
+            src="assets/section1_Img.webp"
+            alt="밍글 선생님"
+            class="w-full max-w-md mx-auto object-cover"
+          />
+        </div>
+        <div class="flex-1 order-1 lg:order-2 text-center lg:text-left">
+          <div class="space-y-8 text-mingle-blue text-body lg:text-body-lg xl:text-body-xl mb-4">
+            <p class="text-gray-600 leading-relaxed">이런 고민에서 시작했습니다.</p>
+            <p class="text-gray-600 leading-relaxed">
+              영어는 필요하다고 느끼지만 아직 학원은 이른 것 같고,<br />
+              집에서 시키자니 방법을 모르겠는 시기.
+            </p>
+            <p>
+              <span class="text-nanum-eb">
+                아이에게는​ 단순히 영어를 ‘하는 시간’이 아니라,<br />
+                영어를 자연스럽게 받아들이고​ 익숙해지는 경험이 필요합니다.<br />
+              </span>
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              하지만 현실의 선택지는 늘 극단적이었습니다.<br />
+              <div class="space-y-2">
+                <p class="bg-mingle-blue-bg text-gray-800 rounded-2xl">
+                  &nbsp;&nbsp;· 학습은 확실하지만 아이가 힘든 학원형 영어
+                </p>
+                  <p class="bg-mingle-blue-bg text-gray-800 rounded-2xl">
+                  &nbsp;&nbsp;· 아이는 즐겁지만 학습 체감이 약한 단순 놀이 영어
+                </p>
+              </div>
+            </p>
+          </div>
+          <p class="text-gray-600 text-body lg:text-body-lg xl:text-body-xl leading-relaxed">
+            밍글은 이 사이에서<br />
+            <span class="text-nanum-eb text-mingle-blue">영어를 습득하는 힘 자체를 기르는 방식으로</span
+            ><br />
+            완전히 다르게 설계되었습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Mingle Section (grid-columns: 1 / 2 / 2) -->
+    <section id="intro" class="bg-gray-50 py-section lg:py-section-lg xl:py-section-xl">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-title lg:text-title-lg xl:text-title-xl text-nanum-eb text-center mb-8"
+        >
+          <span class="text-mingle-purple">밍글은 </span>어떤 서비스인가요?
+        </h2>
+        <p
+          class="text-center text-gray-600 mb-10 max-w-4xl mx-auto text-body lg:text-body-lg xl:text-body-xl"
+        >
+          <span class="text-nanum-eb"
+            >밍글은 아이의 반응과 몰입을 기준으로 운영되는 가정 방문 영어 돌봄 서비스입니다.</span><br />
+          암기나 진도 중심이 아닌, 이해와 경험을 우선하며<br />
+          영상과 e-book, 놀이 활동을 통해 영어에 자연스럽게 익숙해지도록 합니다.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+          <img
+            src="assets/section2_1.webp"
+            alt="밍글 수업 장면 1"
+            class="w-full rounded-2xl object-cover"
+          />
+          <img
+            src="assets/section2_2.webp"
+            alt="밍글 수업 장면 2"
+            class="w-full rounded-2xl object-cover"
+          />
+        </div>
+
+        <!-- 4개 특징: 영상·이북 / 놀이·활동 / 표준화 / 한국어 병행 (데스크톱 가로 4열) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8">
+          <!-- 1 영상 이북 -->
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex-row justify-center">
+            <div class="rounded-xl bg-mingle-blue-bg px-4 py-2 mb-6 text-center">
+              <span class="text-gray-800 text-nanum-eb text-body lg:text-body-lg"
+                >영상·이북으로<br/>상황 이해</span
+              >
+            </div>
+            <div
+              class="flex items-center justify-center mb-6"
+            >
+              <img src="assets/point_1.webp" alt="" class="w-28 object-contain" />
+            </div>
+            <h3 class="text-nanum-eb text-gray-800 mb-2 text-body lg:text-body-lg text-center">상황 먼저 이해</h3>
+            <p class="text-gray-600 text-body text-center">동화 이북과 영상으로<br />수업 맥락을 파악합니다.</p>
+          </div>
+<!-- 2 놀이 활동 -->
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex-row justify-center">
+            <div class="rounded-xl bg-mingle-purple-bg px-4 py-2 mb-6 text-center">
+              <span class="text-gray-800 text-nanum-eb text-body lg:text-body-lg"
+                >놀이·활동 속<br/>영어 경험</span
+              >
+            </div>
+            <div
+              class="flex items-center justify-center mb-6"
+            >
+              <img src="assets/point_2.webp" alt="" class="w-28 object-contain" />
+            </div>
+            <h3 class="text-nanum-eb text-gray-800 mb-2 text-body lg:text-body-lg text-center">놀이로 영어 배우기</h3>
+            <p class="text-gray-600 text-body text-center">AR 활동, 블록 놀이,<br />신체 활동을 통해<br />영어를 경험합니다.</p>
+          </div>
+<!-- 3 표준화 -->
+
+<div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex-row justify-center">
+  <div class="rounded-xl bg-mingle-blue-bg px-4 py-2 mb-6 text-center">
+    <span class="text-gray-800 text-nanum-eb text-body lg:text-body-lg"
+      >표준화된<br/>수업 구조</span
+    >
+  </div>
+  <div
+    class="flex items-center justify-center mb-6"
+  >
+    <img src="assets/point_3.webp" alt="" class="w-28 object-contain" />
+  </div>
+  <h3 class="text-nanum-eb text-gray-800 mb-2 text-body lg:text-body-lg text-center">표준화된 수업</h3>
+  <p class="text-gray-600 text-body text-center">모든 수업이 일관된<br />구조로 강사의 역량에<br />영향을 받지 않습니다.</p>
+</div>
+
+          <!-- 4 한국어 병행 -->
+
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex-row justify-center">
+            <div class="rounded-xl bg-mingle-purple-bg px-4 py-2 mb-6 text-center">
+              <span class="text-gray-800 text-nanum-eb text-body lg:text-body-lg"
+                >몰입을 위한<br/>한국어 병행</span
+              >
+            </div>
+            <div
+              class="flex items-center justify-center mb-6"
+            >
+              <img src="assets/point_4.webp" alt="" class="w-28 object-contain" />
+            </div>
+            <h3 class="text-nanum-eb text-gray-800 mb-2 text-body lg:text-body-lg text-center">한국어 병행</h3>
+            <p class="text-gray-600 text-body text-center">한국어 설명을 통해<br />충분한 이해를 돕습니다.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Differentiated Service Sections (제목: 연보라+검정 2색) -->
+    <section
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-section lg:py-section-lg xl:py-section-xl"
+    >
+
+      <div class="flex flex-col md:flex-row items-center gap-8 py-10">
+        <div class="flex-1">
+          <h2 class="text-title lg:text-title-lg xl:text-title-xl text-nanum-eb mb-8">
+            <span class="text-mingle-purple">밍글은 </span
+            ><span class="text-gray-800">일반적인<br/> 방문 수업과 다릅니다.</span>
+          </h2>
+          <p class="text-gray-600 text-body lg:text-body-lg xl:text-body-xl leading-relaxed">
+            아이 반응 중심 수업! 정해진 분량이 아닌,<br/> 아이의 집중도와 흥미에 맞춰 수업을 조정합니다.<br/>
+            같은 커리큘럼도 아이마다 다르게 경험합니다.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="assets/section3_img.webp"
+            alt="밍글 차별화 수업 1"
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8 py-10">
+        <div class="flex-1">
+          <h2 class="text-title lg:text-title-lg xl:text-title-xl text-nanum-eb mb-8">
+            <span class="text-mingle-purple">주입식 영어 </span
+            ><span class="text-gray-800">수업이<br/> 아닙니다.</span>
+          </h2>
+          <p class="text-gray-600 text-body lg:text-body-lg xl:text-body-xl leading-relaxed">
+            단어 암기나 반복 발화를 목표로 하지 않습니다.<br /> e-book과 영상을 통해 영어가 쓰이는 상황을
+            먼저 이해하고,<br /> 놀이와 활동 속에서 아이의 일상 언어를 영어로 자연스럽게 <br> 연결합니다.
+            영어를 가르치기보다, 영어가 쓰이는 환경을<br /> 먼저 만듭니다.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="assets/section4_img.webp"
+            alt="밍글 차별화 수업 2"
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      
+      <div class="flex flex-col md:flex-row items-center gap-8 py-10">
+        <div class="flex-1">
+          <h2 class="text-title lg:text-title-lg xl:text-title-xl text-nanum-eb mb-8">
+            <span class="text-mingle-purple">무작정 영어로만</span><br/> 하는 수업이 아닙니다.
+          </h2>
+          <p class="text-gray-600 text-body lg:text-body-lg xl:text-body-xl leading-relaxed">
+            영어만으로 밀어붙이지 않습니다.<br />
+아이의 이해를 돕기 위해 필요한 순간에는 한국어<br />
+설명을 함께 사용합니다. 듣고 이해하는 경험이<br />
+먼저 쌓이도록 돕습니다.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="assets/section5_img.webp"
+            alt="밍글 차별화 수업 3"
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8 py-10">
+       
+        <div class="flex-1">
+          <h2 class="text-title lg:text-title-lg xl:text-title-xl text-nanum-eb mb-8">
+            <span class="text-mingle-purple">강사 개인 역량에</span
+            ><span class="text-gray-800"><br/> 의존하지 않습니다.</span>
+          </h2>
+          <p class="text-gray-600 text-body lg:text-body-lg xl:text-body-xl leading-relaxed">
+            선생님 개인 역량에 따라 수업의 질이 달라지지<br />
+않도록 설계했습니다. 표준화된 이러닝 교안으로<br />
+누가 와도 동일한 수업 경험을 제공합니다.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="assets/section6_img.webp"
+            alt="밍글 차별화 수업 4"
+            class="w-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Content Section (2x2 그리드, 배경 #F7EFFF, 카드 디자인) -->
+    <section
+      id="content"
+      class="relative py-section lg:py-section-lg xl:py-section-xl overflow-hidden bg-mingle-purple-bg"
+    >
+      <img
+        src="assets/bubble_1.webp"
+        alt=""
+        class="absolute top-20 left-20 w-20 h-20 pointer-events-none"
+        aria-hidden="true"
+      />
+      <img
+        src="assets/bubble_2.webp"
+        alt=""
+        class="absolute bottom-10 right-16 w-32 h-32 pointer-events-none"
+        aria-hidden="true"
+      />
+      <div class="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2
+          class="text-gray-800 text-title lg:text-title-lg xl:text-title-xl text-nanum-eb text-center mb-8"
+        >
+          검증된 콘텐츠로 구성된 <span class="text-mingle-purple">밍글 수업</span>
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 p-8 lg:p-2">
+          <!-- 카드1 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition p-4 sm:p-6"
+          >
+            <div class="w-auto mb-4 rounded-xl overflow-hidden bg-white">
+              <img
+                src="assets/bottom_1.webp"
+                alt="미국문화 체험"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-600 text-body text-center">
+              미국문화 체험 가정방문
+            </p>
+            <p class="text-gray-800 text-body text-center text-nanum-eb">
+              놀이활동형 돌봄 교육
+            </p>
+          </div>
+
+          <!-- 카드2 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition p-4 sm:p-6"
+          >
+            <div class="w-auto mb-4 rounded-xl overflow-hidden bg-white">
+              <img
+                src="assets/bottom_2.webp"
+                alt="웃기는 처음영어"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-600 text-body text-center">
+              <span class="text-nanum-eb">EBS '웃기는 처음영어'</span> 진행자가</p>
+              <p class="text-gray-800 text-body text-center">         
+              직접 만든, 검증된 놀이영어
+            </p>
+          </div>
+
+          <!-- 카드3 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition p-4 sm:p-6"
+          >
+            <div class="w-auto mb-4 rounded-xl overflow-hidden bg-white">
+              <img
+                src="assets/bottom_3.webp"
+                alt="e-book 원서 동화"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <p class="text-gray-800 text-body text-center text-nanum-eb">
+              e-book 원서 동화, 이러닝 콘텐츠,</p>
+              <p class="text-gray-800 text-body text-center">전문교구 활용 수업
+            </p>
+          </div>
+
+          <!-- 카드4 -->
+          <div
+            class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition p-4 sm:p-6"
+          >
+            <div class="flex flex-col sm:flex-row items-center gap-4 mb-4">
+              <img
+                src="assets/bottom_4.webp"
+                alt="방문영어 수업"
+                class="w-full h-full object-cover"
+              />
+             
+            </div>
+            <p class="text-gray-800 text-body text-center">
+              다채로운 구성의<br /> </p>
+              <p class="text-gray-800 text-body text-center text-nanum-eb">방문영어 수업이 월 10만원대
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-100 py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+        <p>© 밍글 Mingle. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
